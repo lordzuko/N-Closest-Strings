@@ -30,7 +30,7 @@ def main(word_list, N):
         diff_index_x = [(c,abs(word_list_index[x] - word_list_index[c])) for c in closest_strings]
         diff_index_x.sort(key=itemgetter(1))
         diff_index_x = [s[0] for s in diff_index_x]
-        print("The closest {} items for {} is {}".format(N,x,','.join(diff_index_x[1:N+1])))
+        print("The closest {} items for {} is {}".format(N,x,','.join(sorted(diff_index_x[1:N+1]))))
 
 
 
