@@ -1,7 +1,6 @@
 import time
 import sys
 
-
 class TrieLevDistance:
 
     def __init__(self, trie):
