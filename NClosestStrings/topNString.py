@@ -4,13 +4,6 @@ from operator import itemgetter
 from LevenshteinDistance.Trie import Trie
 from LevenshteinDistance.LevDistance import TrieLevDistance
 
-def find_proximity(word1, word2):
-    """
-    Function to choose which word is closer if edit distance is equal
-    :param word1:
-    :param word2:
-    :return:
-    """
 
 def main(word_list, N):
     """
