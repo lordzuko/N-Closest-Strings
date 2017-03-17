@@ -4,10 +4,14 @@ from operator import itemgetter
 from LevenshteinDistance.Trie import Trie
 from LevenshteinDistance.LevDistance import TrieLevDistance
 
-# TODO: Try to make it lazy
-def create_word_list(path):
-    pass
-# TODO: later 1st argument is path
+def find_proximity(word1, word2):
+    """
+    Function to choose which word is closer if edit distance is equal
+    :param word1:
+    :param word2:
+    :return:
+    """
+
 def main(word_list, N):
     """
 
@@ -20,9 +24,12 @@ def main(word_list, N):
     for word in word_list:
         trie.insert(word)
 
-    closest_strings = trie_lev_distance.search('4',3)
-    closest_strings.sort(key=itemgetter(1,0))
-    print(closest_strings[1:N+1])
+    max_cost = 4
+    for x in word_list:
+        closest_strings = trie_lev_distance.search(x, max_cost)
+        closest_strings.sort(key=itemgetter(1, 0))
+        closest_strings = [s[0] for s in closest_strings]
+        print("The closest {} items for {} is {}".format(N,x,','.join(closest_strings[1:N+1])))
 
 
 if __name__ == "__main__":
