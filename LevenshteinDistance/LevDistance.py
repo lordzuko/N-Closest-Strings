@@ -1,5 +1,3 @@
-#!/usr/bin/python
-#By Steve Hanov, 2011. Released to the public domain
 import time
 import sys
 
